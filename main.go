@@ -18,10 +18,7 @@ func loggerMiddleware(next http.Handler) http.Handler {
 func main() {
 	mux := http.NewServeMux()
 
-	helloHandler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello World!"))
-	})
-	mux.Handle("/", loggerMiddleware(helloHandler))
+	mux.Handle("/", loggerMiddleware(http.FileServer(http.Dir("./web"))))
 
 	err := http.ListenAndServe(":8080", mux)
 	if errors.Is(err, http.ErrServerClosed) {
