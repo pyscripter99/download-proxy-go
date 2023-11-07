@@ -78,7 +78,7 @@ h1 {
 .download-btn {
     width: 9rem;
     height: 3.375rem;
-    border-radius: 0rem 1.25rem 1.25rem 0rem;
+    border-radius: 0 1.25rem 1.25rem 0;
     background: var(--primary, #375341);
     outline: none;
     border: none;
