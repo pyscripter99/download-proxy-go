@@ -8,11 +8,19 @@ import (
 	"os"
 )
 
-func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+func loggerMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		log.Printf("[%s] %s %s", r.Method, r.URL, r.RemoteAddr)
+		next.ServeHTTP(w, r)
+	})
+}
+
+func main() {
+	mux := http.NewServeMux()
+	helloHandler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Hello World!"))
 	})
+	mux.Handle("/", loggerMiddleware(helloHandler))
 
 	err := http.ListenAndServe(":8080", nil)
 	if errors.Is(err, http.ErrServerClosed) {
