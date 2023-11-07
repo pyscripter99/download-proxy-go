@@ -88,4 +88,5 @@ h1 {
 
 .theme-toggle {
     padding: 0;
+    cursor: pointer;
 }
