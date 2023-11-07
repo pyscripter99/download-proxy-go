@@ -12,6 +12,7 @@ body {
     --secondary: #e0ebe4;
     --accent: #669978;
 }
+
 :root[data-theme="dark"] {
     --text: #f3f7f5;
     --background: #121612;
