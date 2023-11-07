@@ -81,6 +81,30 @@ h1 {
     font-size: medium;
 }
 
+@media only screen and (max-width: 40rem) {
+    .download-bar {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .main {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .url-input {
+        width: 100%;
+        border-radius: 1.25rem;
+        border: 2px solid var(--primary, #669978);
+    }
+
+    .download-btn {
+        width: 100%;
+        background: inherit;
+        color: var(--primary);
+    }
+}
+
 .icon > svg > *,
 .gitea-link > svg > g > path {
     fill: var(--text);
