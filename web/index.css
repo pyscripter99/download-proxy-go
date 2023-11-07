@@ -24,6 +24,11 @@
     gap: 1.5rem;
 }
 
+.icon-bar .icon {
+    background: none;
+    border: none;
+}
+
 .main {
     position: absolute;
     left: 50%;
