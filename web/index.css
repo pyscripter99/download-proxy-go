@@ -85,3 +85,7 @@ h1 {
 .gitea-link > svg > g > path {
     fill: var(--text);
 }
+
+.theme-toggle {
+    padding: 0;
+}
