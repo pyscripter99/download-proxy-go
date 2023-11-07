@@ -96,7 +96,7 @@ h1 {
     color: #080c0a;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (width <= 40rem) {
     .download-bar {
         flex-direction: column;
         width: 90%;
