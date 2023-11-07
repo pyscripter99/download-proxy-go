@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
 
+html,
+body {
+    background-color: var(--background);
+}
+
 :root[data-theme="light"] {
     --text: #080c0a;
     --background: #eaf1ec;
@@ -9,7 +14,7 @@
 }
 :root[data-theme="dark"] {
     --text: #f3f7f5;
-    --background: #0e1510;
+    --background: #121612;
     --primary: #acc8b6;
     --secondary: #141f18;
     --accent: #669978;
@@ -66,6 +71,8 @@ h1 {
     border-left: 2px solid var(--primary, #669978);
     border-top: 2px solid var(--primary, #669978);
     padding-left: 0.5rem;
+    background: inherit;
+    color: var(--text);
 }
 
 .download-btn {
@@ -75,10 +82,17 @@ h1 {
     background: var(--primary, #375341);
     outline: none;
     border: none;
-    color: white;
     font-size: medium;
     font-weight: 600;
     font-size: medium;
+}
+
+:root[data-theme="light"] .download-btn {
+    color: #f3f7f5;
+}
+
+:root[data-theme="dark"] .download-btn {
+    color: #080c0a;
 }
 
 @media only screen and (max-width: 40rem) {
@@ -101,7 +115,7 @@ h1 {
     .download-btn {
         width: 100%;
         background: inherit;
-        color: var(--primary);
+        color: var(--primary) !important;
     }
 }
 
