@@ -9,7 +9,6 @@ body {
     --text: #080c0a;
     --background: #eaf1ec;
     --primary: #375341;
-    --primary-hover: #466e55;
     --secondary: #e0ebe4;
     --accent: #669978;
 }
@@ -18,7 +17,6 @@ body {
     --text: #f3f7f5;
     --background: #121612;
     --primary: #acc8b6;
-    --primary-hover: #9fb9a8;
     --secondary: #141f18;
     --accent: #669978;
 }
@@ -89,12 +87,6 @@ h1 {
     font-weight: 600;
     font-size: medium;
     cursor: pointer;
-    transition: all 100ms;
-}
-
-.download-btn:hover {
-    background: var(--primary-hover);
-    transition: all 100ms;
 }
 
 :root[data-theme="light"] .download-btn {
@@ -126,10 +118,6 @@ h1 {
         width: 100%;
         background: inherit;
         color: var(--primary) !important;
-    }
-
-    .download-btn:hover {
-        background: var(--primary-hover);
     }
 }
 
