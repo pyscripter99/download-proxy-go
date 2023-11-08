@@ -8,8 +8,12 @@ clone:
 steps:
     tag:
         image: pyscripter99/tag-it
+        when:
+            - event: [manual]
     release:
         image: goreleaser/goreleaser
         commands:
             - goreleaser release
         secrets: [gitea_token]
+        when:
+            - event: [manual]
