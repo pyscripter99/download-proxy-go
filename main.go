@@ -20,6 +20,7 @@ func main() {
 
 	mux.Handle("/", loggerMiddleware(http.FileServer(http.Dir("./web"))))
 
+	fmt.Println("Starting server on address: ':8080'")
 	err := http.ListenAndServe(":8080", mux)
 	if errors.Is(err, http.ErrServerClosed) {
 		fmt.Println("Server closed")
