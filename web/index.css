@@ -71,6 +71,7 @@ h1 {
     border-bottom: 2px solid var(--primary, #669978);
     border-left: 2px solid var(--primary, #669978);
     border-top: 2px solid var(--primary, #669978);
+    padding-left: 0.5rem;
     background: inherit;
     color: var(--text);
 }
@@ -86,10 +87,6 @@ h1 {
     font-weight: 600;
     font-size: medium;
     cursor: pointer;
-}
-
-.download-btn:hover {
-    backdrop-filter: brightness(80%);
 }
 
 :root[data-theme="light"] .download-btn {
