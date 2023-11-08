@@ -5,6 +5,8 @@ function loadTheme() {
             "data-theme",
             localStorage.getItem("theme")
         );
+
+        dark = localStorage.getItem("theme") == "dark";
     }
 }
 
