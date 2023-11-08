@@ -9,6 +9,13 @@ function loadTheme() {
         );
 
         dark = localStorage.getItem("theme") == "dark";
+
+        document.getElementById("dark-icon").style.display = dark
+            ? "none"
+            : "block";
+        document.getElementById("light-icon").style.display = dark
+            ? "block"
+            : "none";
     }
 }
 
