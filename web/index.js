@@ -8,6 +8,7 @@ function loadTheme() {
             localStorage.getItem("theme")
         );
     }
+
     dark = localStorage.getItem("theme") == "dark";
 
     document.getElementById("dark-icon").style.display = dark
