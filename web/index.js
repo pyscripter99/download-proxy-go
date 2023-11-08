@@ -1,4 +1,6 @@
 // Theme
+let dark = false;
+
 function loadTheme() {
     if (localStorage.getItem("theme")) {
         document.documentElement.setAttribute(
@@ -11,8 +13,6 @@ function loadTheme() {
 }
 
 loadTheme();
-
-let dark = false;
 
 document.querySelector(".theme-toggle").addEventListener("click", () => {
     dark = !dark;
