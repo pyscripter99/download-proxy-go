@@ -86,6 +86,7 @@ h1 {
     font-size: medium;
     font-weight: 600;
     font-size: medium;
+    cursor: pointer;
 }
 
 :root[data-theme="light"] .download-btn {
