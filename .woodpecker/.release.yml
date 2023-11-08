@@ -4,8 +4,8 @@ clone:
         image: woodpeckerci/plugin-git
         settings:
             tags: true
-    when:
-        - event: [manual]
+        when:
+            - event: [manual]
 
 steps:
     tag:
