@@ -1,0 +1,15 @@
+# Woodpecker
+clone:
+    git:
+        image: woodpeckerci/plugin-git
+        settings:
+            tags: true
+
+steps:
+    tag:
+        image: pyscripter99/tag-it
+    release:
+        image: goreleaser/goreleaser
+        commands:
+            - goreleaser release
+        secrets: [gitea_token]
