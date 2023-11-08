@@ -131,7 +131,7 @@ h1 {
     .download-btn:hover {
         width: 100%;
         background: inherit;
-        color: var(--primary-hover);
+        color: var(--primary-hover) !important;
     }
 }
 
