@@ -1,12 +1,16 @@
 package main
 
 import (
+	"embed"
 	"errors"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
 )
+
+//go:embed web/*
+var web embed.FS
 
 func loggerMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -18,7 +22,7 @@ func loggerMiddleware(next http.Handler) http.Handler {
 func main() {
 	mux := http.NewServeMux()
 
-	mux.Handle("/", loggerMiddleware(http.FileServer(http.Dir("./web"))))
+	mux.Handle("/", loggerMiddleware(http.FileServer(http.FS(web))))
 
 	fmt.Println("Starting server on address: ':8080'")
 	err := http.ListenAndServe(":8080", mux)
