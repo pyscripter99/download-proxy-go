@@ -22,6 +22,7 @@ func main() {
 	}
 
 	mux.Handle("/", loggerMiddleware(http.FileServer(http.FS(webStripped))))
+	mux.HandleFunc("/download", downloadHandler)
 
 	fmt.Println("Starting server on address: ':8080'")
 	err = http.ListenAndServe(":8080", mux)
