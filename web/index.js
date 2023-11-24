@@ -27,3 +27,12 @@ document.querySelector(".theme-toggle").addEventListener("click", () => {
 
     loadTheme();
 });
+
+document.querySelector(".download-btn").addEventListener("click", () => {
+    document.querySelector(".download-btn").disabled = true;
+    console.log(document.querySelector(".download-btn").disabled);
+    window.location.href =
+        "/download?url=" +
+        encodeURIComponent(document.querySelector(".url-input").value);
+    document.querySelector(".download-btn").disabled = false;
+});
