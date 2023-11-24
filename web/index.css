@@ -19,7 +19,7 @@ body {
 :root[data-theme="dark"] {
     --text: #f3f7f5;
     --background: #121612;
-    --popup-background: #141414;
+    --popup-background: #131613;
     --primary: #acc8b6;
     --primary-hover: #9fb9a8;
     --secondary: #141f18;
